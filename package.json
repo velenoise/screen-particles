@@ -1,0 +1,54 @@
+{
+  "name": "particle-displace",
+  "version": "1.0.0",
+  "description": "particle displacement with depth map",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Caio Velenosi",
+    "email": "caio.velenosi@gmail.com",
+    "url": "https://github.com/velenoise"
+  },
+  "dependencies": {
+    "glsl-noise": "0.0.0",
+    "raf-loop": "^1.1.3",
+    "three": "^0.84.0",
+    "three-orbit-controls": "^82.1.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.0.0",
+    "budo": "^9.4.5",
+    "glslify": "^6.0.1",
+    "uglify-js": "^2.7.5"
+  },
+  "scripts": {
+    "start": "budo src/js/index.js:bundle.js --dir build --live -o",
+    "build": "browserify src/js/index.js | uglifyjs -cm > build/bundle.js"
+  },
+  "private": true,
+  "keywords": [
+    "glslify",
+    "three",
+    "js",
+    "threejs",
+    "glsl",
+    "glslbin",
+    "stackgl"
+  ],
+  "browserify": {
+    "transform": [
+      "babelify",
+      "glslify"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "bugs": {
+    "url": ""
+  }
+}
